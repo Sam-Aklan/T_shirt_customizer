@@ -1,5 +1,5 @@
 import { AccumulativeShadows, RandomizedLight } from '@react-three/drei'
-import {easing} from 'maath'
+// import {easing} from 'maath'
 import { useRef } from 'react'
 
 const Backdrop = () => {
@@ -7,7 +7,7 @@ const Backdrop = () => {
   return (
     <AccumulativeShadows
     position={[0,0,-0.14]}
-    ref={(e)=>shadows}
+    ref={()=>shadows}
     temporal
     frames={60}
     alphaTest={0.85}

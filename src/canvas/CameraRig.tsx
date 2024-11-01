@@ -1,7 +1,7 @@
 import { ReactNode, useRef } from 'react'
 import { useSnapshot } from 'valtio'
 import state from '../store'
-import * as THREE from 'three'
+// import * as THREE from 'three'
 import * as easing from 'maath/easing'
 import { useFrame } from '@react-three/fiber'
 interface props{
@@ -33,6 +33,7 @@ const CameraRig = ({children}:props) => {
         0.25,
         delta
       )
+      //@ts-expect-error nothing
       easing.damp3(state.camera.position,targetPostion,0.25,delta)
   })
   // rotating smoothly
